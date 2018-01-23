@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>WebRTC Demo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/main.css">
+  </head>
+  <body>
+    
+    <div class="container">
+      <!--Local Stream-->
+      <div>
+        <h4>Local Video &nbsp <button id="callbtn">Call</button></h4>
+        <video id="localvid" class="vidie" autoplay></video>
+      </div>
+      
+      <!--Remote Stream-->
+      <div>
+        <h4>Remote Video</h4>
+        <video id="remotevid" class="vidie" autoplay></video>
+      </div>
+    </div>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.4/socket.io.js"></script>
+    <script src="/js/main.js"></script>
+  </body>
+</html>

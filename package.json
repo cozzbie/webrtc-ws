@@ -1,0 +1,12 @@
+{
+  "name": "webrtc-demo",
+  "version": "0.0.0",
+  "description": "A WebRTC demo showing the execution pathway for video streaming",
+  "main": "server.js",
+  "repository": "",
+  "author": "Timi Aiyemo <timi.aiyemo@andela.com>",
+  "dependencies": {
+    "express": "^4.16.2",
+    "socket.io": "^2.0.4"
+  }
+}
