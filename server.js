@@ -13,22 +13,28 @@ io.on('connection', function (socket) {
   
     io.emit("joined");
     
+    // Alert sockets join
     socket.on("join", function(){
       console.log("Peer has joined the room");
     });
     
+    // The callers session description protocol
     socket.on("callsdp", function(data){
       socket.to("webrtc.room").emit("callsdp", data);
     });
     
+    // The reply SDP
     socket.on("replysdp", function(data){
       socket.to("webrtc.room").emit("replysdp", data);
     });
     
+    // Transfer of ICE Candidates
     socket.on("candidate", function(data){
       socket.to("webrtc.room").emit("candidate", data);
     });
     
+    
+    // Add the socket to some arbitrary room
     socket.join("webrtc.room");
 });
 
